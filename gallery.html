@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <title>FITCAMP - Gallery</title>
+
+    <link rel="stylesheet" href="gallery.css">
+
+    <link rel="preconnect"
+          href="https://fonts.googleapis.com">
+
+    <link rel="preconnect"
+          href="https://fonts.gstatic.com"
+          crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+          rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+<header class="navbar">
+
+    <div class="logo">
+        FIT<span>CAMP</span>
+    </div>
+
+    <nav>
+        <a href="index.html">
+            Home
+        </a>
+
+        <a href="gallery.html" class="active">
+            Gallery
+        </a>
+
+        <a href="account.html">
+            Account
+        </a>
+    </nav>
+
+</header>
+
+
+
+    <!-- HERO -->
+
+    <section class="gallery-hero">
+
+        <p>FITCAMP INSPIRATION</p>
+
+        <h1>
+            Find Your
+            <span>Campus Style</span>
+        </h1>
+
+        <p class="hero-description">
+            Cari inspirasi outfit kampus sesuai
+            dengan style yang kamu suka.
+        </p>
+
+
+        <!-- SEARCH -->
+
+        <div class="search-box">
+
+            <span>⌕</span>
+
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Cari outfit, style, warna..."
+            >
+
+        </div>
+
+    </section>
+
+
+    <!-- FILTER -->
+
+    <section class="gallery-container">
+
+        <div class="filter-area">
+
+            <button
+                class="filter-btn active"
+                data-filter="all">
+                All
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="casual">
+                Casual
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="formal">
+                Formal
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="streetwear">
+                Streetwear
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="elegant">
+                Elegant
+            </button>
+
+            <button
+                class="filter-btn"
+                data-filter="hijab">
+                Hijab
+            </button>
+
+        </div>
+
+
+        <!-- GALLERY -->
+
+        <div
+            id="galleryGrid"
+            class="gallery-grid">
+        </div>
+
+
+        <!-- NO RESULT -->
+
+        <div
+            id="noResult"
+            class="no-result hidden">
+
+            <h3>Outfit tidak ditemukan</h3>
+
+            <p>
+                Coba cari dengan kata kunci lain.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- MODAL -->
+    <div id="outfitModal" class="modal">
+        <div class="modal-content">
+            <button id="closeModal" class="close-modal">×</button>
+
+            <!-- Bagian Kiri: Gambar Outfit -->
+            <div class="modal-left">
+                <div class="modal-header-nav">
+                    <span class="fav-icon">♡ Favorites</span>
+                    <span class="nav-title">Outfit Details</span>
+                </div>
+                <div class="modal-image-container">
+                    <img id="modalImage" src="" alt="Outfit">
+                </div>
+                <div class="modal-image-caption">
+                    <div class="brand">FITCAMP | Gallery Outfit Detail</div>
+                    <div class="sub-caption">Collegiate Casual Look</div>
+                </div>
+            </div>
+
+            <!-- Bagian Kanan: Hasil Analisis -->
+            <div class="modal-right">
+                <span id="modalCategory" class="modal-badge">CASUAL CAMPUS</span>
+                <h2 id="modalTitle" class="modal-heading">Clean Campus Outfit</h2>
+
+                <!-- Box Card Indeks Harmoni Gaya -->
+                <div class="harmony-card">
+                    <div class="circle-score" id="harmonyScore">94%</div>
+                    <div class="harmony-text">
+                        <strong>Indeks Harmoni Gaya</strong>
+                        <p id="dominantStyle">Gaya Dominan: Casual Modern</p>
+                    </div>
+                </div>
+
+                <!-- Rincian Item Busana -->
+                <div class="section-header">
+                    <span>RINCIAN ITEM BUSANA (3 KOMPONEN)</span>
+                    <small>Bisa Dikustomisasi</small>
+                </div>
+
+                <div id="modalItemsList" class="items-list">
+                    <!-- Item dinamis diinjeksi lewat JS -->
+                </div>
+
+                <!-- Footer Action Buttons -->
+                <div class="modal-actions">
+                    <a href="index.html" class="btn-primary">
+                        Coba analisis outfitmu sekarang
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- FOOTER -->
+
+    <footer>
+
+        <div class="footer-logo">
+            FITCAMP
+        </div>
+
+        <p>
+            Your Campus Outfit Assistant
+        </p>
+
+        <span>
+            © 2026 FITCAMP
+        </span>
+
+    </footer>
+
+
+    <script src="gallery.js"></script>
+
+</body>
+
+</html>
